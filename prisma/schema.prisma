@@ -6,3 +6,10 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model Category{
+    id String @id @default(uuid())
+    name String
+
+    @@map("tb_category")
+}
